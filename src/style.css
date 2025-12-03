@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+:root {
+  --font-sans:
+    'HarmonyOS Sans SC', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --z-sidebar: 1000;
+  --z-app-bar: 1000;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  /* color: #212636; */
+  color: var(--color-slate-900);
+}
