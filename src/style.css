@@ -7,6 +7,25 @@
 
   --z-sidebar: 1000;
   --z-app-bar: 1000;
+
+  --brand-light: oklch(58.5% 0.233 277.117); /* indigo 500 */
+  --brand: oklch(51.1% 0.262 276.966); /* indigo 600 */
+  --brand-dark: oklch(45.7% 0.24 277.023); /* indigo 700 */
+
+  --error: oklch(57.7% 0.245 27.325); /* red 600 */
+  --warning: oklch(64.6% 0.222 41.116); /* orange 600 */
+  --success: oklch(62.7% 0.194 149.214); /* green 600 */
+  --info: oklch(54.6% 0.245 262.881); /* blue 600 */
+}
+
+@theme inline {
+  --color-brand-light: var(--brand-light);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-info: var(--info);
 }
 
 html,
