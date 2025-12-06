@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button } from '@/components/Button';
-import { Search } from '@/components/Icons';
+import { Button } from '@/components/ui/Button';
+import { Search } from '@/components/ui/Icons';
 import { MainLayoutRoot } from '@/layouts';
 </script>
 
@@ -9,11 +9,14 @@ import { MainLayoutRoot } from '@/layouts';
     <div class="px-4 py-2 flex items-center gap-2">
       <Button size="small" type="button" @click="() => console.log(222)">
         <Search />
+        Search
       </Button>
       <Button>
         <Search />
+        Search
       </Button>
       <Button size="large" disabled @click="() => console.log(111)">
+        <Search />
         DISABLED
       </Button>
       <Button size="small" variant="outlined">
@@ -24,6 +27,9 @@ import { MainLayoutRoot } from '@/layouts';
       </Button>
       <Button size="large" variant="outlined" disabled>
         DISABLED
+      </Button>
+      <Button variant="text">
+        CLICK
       </Button>
     </div>
     <div class="px-4 py-2 flex items-center gap-2">

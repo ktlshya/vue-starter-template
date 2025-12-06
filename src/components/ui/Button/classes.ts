@@ -3,21 +3,23 @@ import { cva } from 'class-variance-authority';
 
 export const buttonVariants = cva(
   [
-    'inline-flex items-center justify-center shrink-0 gap-2',
-    'text-white text-sm font-medium whitespace-nowrap',
-    '[&_svg]:pointer-events-none [&_svg:not([class*=size-])]:size-4 [&_svg]:shrink-0',
+    'inline-flex items-center justify-center shrink-0 gap-1',
+    'font-medium whitespace-nowrap',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0',
     'rounded-md',
+    'transition-[color,background-color,border-color]',
   ],
   {
     variants: {
       variant: {
-        contained: '',
+        contained: 'text-white',
         outlined: 'border border-current bg-white',
+        text: 'hover:bg-neutral-100',
       },
       size: {
-        default: 'h-9 px-4 py-2',
-        small: 'h-8 px-3 has-[>svg]:px-2',
-        large: 'h-10 px-6 has-[>svg]:px-4',
+        default: 'h-9 px-4 py-2 text-sm [&_svg:not([class*=size-])]:size-4',
+        small: 'h-8 px-3 has-[>svg]:px-2 text-xs [&_svg:not([class*=size-])]:size-3.5',
+        large: 'h-10 px-6 has-[>svg]:px-4 text-base [&_svg:not([class*=size-])]:size-5',
       },
       color: {
         primary: '',
@@ -96,13 +98,13 @@ export const buttonVariants = cva(
         variant: 'contained',
         color: ['primary', 'success', 'error', 'warning', 'info'],
         disabled: true,
-        class: 'bg-slate-200 text-slate-600',
+        class: 'bg-slate-200 text-slate-500',
       },
       {
         variant: 'outlined',
         color: ['primary', 'success', 'error', 'warning', 'info'],
         disabled: true,
-        class: 'border-slate-400 text-slate-600',
+        class: 'border-slate-400 text-slate-500',
       },
     ],
     defaultVariants: {

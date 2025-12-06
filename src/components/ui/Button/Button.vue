@@ -19,7 +19,7 @@ const props = defineProps<ButtonProps>();
   <button
     data-slot="button"
     :data-disabled="disabled"
-    :disabled="disabled"
+    v-bind="{ ...$attrs, disabled }"
     :class="cn(buttonVariants({ size, color, variant, disabled }), props.class)"
   >
     <slot />
