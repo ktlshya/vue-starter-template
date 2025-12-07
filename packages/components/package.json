@@ -1,0 +1,21 @@
+{
+  "name": "@wm/components",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.24.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": "./src/index.ts",
+    "./Button": "./src/Button/index.ts",
+    "./Icons": "./src/Icons/index.ts"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.555.0"
+  }
+}

@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/Button';
-import { Search } from '@/components/ui/Icons';
+import { Button, SearchIcon } from '@wm/components';
 import { MainLayoutRoot } from '@/layouts';
 </script>
 
 <template>
   <MainLayoutRoot>
     <div class="px-4 py-2 flex items-center gap-2">
-      <Button size="small" type="button" @click="() => console.log(222)">
-        <Search />
+      <Button size="small" type="button" class="test" @click="() => console.log(222)">
+        <SearchIcon />
         Search
       </Button>
-      <Button>
-        <Search />
+      <Button @click="() => console.log('hahahahaha')">
+        <SearchIcon />
         Search
       </Button>
       <Button size="large" disabled @click="() => console.log(111)">
-        <Search />
+        <SearchIcon />
         DISABLED
       </Button>
       <Button size="small" variant="outlined">
