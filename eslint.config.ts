@@ -1,7 +1,7 @@
 import defineConfig from '@antfu/eslint-config';
 
 export default defineConfig({
-  ignores: ['tsconfig*.json', 'package.json'],
+  ignores: ['**/tsconfig*.json'],
   typescript: true,
   vue: {
     overrides: {

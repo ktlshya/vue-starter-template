@@ -16,7 +16,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@wm/components": ["../components/src"],
-      "@wm/components/*": ["../components/src/*"]
+      "@wm/components/*": ["../components/src/*"],
+      "@wm/utils": ["../utils/src"],
+      "@wm/utils/*": ["../utils/src/*"]
     }
   },
   "include": [

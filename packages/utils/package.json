@@ -1,5 +1,6 @@
 {
-  "name": "@wm/components",
+  "name": "@wm/utils",
+  "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@10.24.0",
   "description": "",
@@ -7,16 +8,14 @@
   "license": "ISC",
   "keywords": [],
   "exports": {
-    ".": "./src/index.ts",
-    "./Button": "./src/Button/index.ts",
-    "./Icons": "./src/Icons/index.ts"
+    ".": "./src/index.ts"
   },
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@wm/utils": "workspace:*",
-    "lucide-vue-next": "^0.555.0"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
   }
 }

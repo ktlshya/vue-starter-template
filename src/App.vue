@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { Button, SearchIcon } from '@wm/components';
+import { cn } from '@wm/utils';
 import { MainLayoutRoot } from '@/layouts';
 </script>
 
 <template>
   <MainLayoutRoot>
-    <div class="px-4 py-2 flex items-center gap-2">
+    <div :class="cn('px-4 py-2 flex items-center gap-2')">
       <Button size="small" type="button" class="test" @click="() => console.log(222)">
         <SearchIcon />
         Search

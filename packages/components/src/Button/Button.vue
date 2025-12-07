@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ButtonHTMLAttributes } from 'vue';
 import type { ButtonVariants } from './variants';
-import { cn } from '@/utils';
+import { cn } from '@wm/utils';
 import { buttonVariants } from './variants';
 
 type NativeButtonProps = Omit<ButtonHTMLAttributes, 'class' | 'color' | 'disabled' | 'type'>;
