@@ -8,13 +8,14 @@ export const buttonVariants = cva(
     '[&_svg]:pointer-events-none [&_svg]:shrink-0',
     'rounded-md',
     'transition-[color,background-color,border-color]',
+    'select-none',
   ],
   {
     variants: {
       variant: {
         contained: 'text-white',
         outlined: 'border border-current bg-white',
-        text: 'hover:bg-neutral-100',
+        text: 'not-disabled:hover:bg-neutral-100',
       },
       size: {
         default: 'h-9 px-4 py-2 text-sm [&_svg:not([class*=size-])]:size-4',
@@ -32,6 +33,10 @@ export const buttonVariants = cva(
         true: 'opacity-50 cursor-not-allowed',
         false: 'cursor-pointer',
       },
+      loading: {
+        true: 'cursor-default opacity-50 pointer-events-none',
+        false: '',
+      },
     },
     compoundVariants: [
       {
@@ -42,6 +47,12 @@ export const buttonVariants = cva(
       },
       {
         variant: 'outlined',
+        color: 'primary',
+        disabled: false,
+        class: 'text-brand hover:text-brand/80 active:text-brand',
+      },
+      {
+        variant: 'text',
         color: 'primary',
         disabled: false,
         class: 'text-brand hover:text-brand/80 active:text-brand',
@@ -59,6 +70,13 @@ export const buttonVariants = cva(
         class: 'text-error hover:text-error/80 active:text-error',
       },
       {
+        variant: 'text',
+        color: 'error',
+        disabled: false,
+        class: 'text-error hover:text-error/80 active:text-error',
+
+      },
+      {
         variant: 'contained',
         color: 'warning',
         disabled: false,
@@ -66,6 +84,12 @@ export const buttonVariants = cva(
       },
       {
         variant: 'outlined',
+        color: 'warning',
+        disabled: false,
+        class: 'text-warning hover:text-warning/80 active:text-warning',
+      },
+      {
+        variant: 'text',
         color: 'warning',
         disabled: false,
         class: 'text-warning hover:text-warning/80 active:text-warning',
@@ -83,6 +107,12 @@ export const buttonVariants = cva(
         class: 'text-success hover:text-success/80 active:text-success',
       },
       {
+        variant: 'text',
+        color: 'success',
+        disabled: false,
+        class: 'text-success hover:text-success/80 active:text-success',
+      },
+      {
         variant: 'contained',
         color: 'info',
         disabled: false,
@@ -90,6 +120,12 @@ export const buttonVariants = cva(
       },
       {
         variant: 'outlined',
+        color: 'info',
+        disabled: false,
+        class: 'text-info hover:text-info/80 active:text-info',
+      },
+      {
+        variant: 'text',
         color: 'info',
         disabled: false,
         class: 'text-info hover:text-info/80 active:text-info',
@@ -105,6 +141,12 @@ export const buttonVariants = cva(
         color: ['primary', 'success', 'error', 'warning', 'info'],
         disabled: true,
         class: 'border-slate-400 text-slate-500',
+      },
+      {
+        variant: 'text',
+        color: ['primary', 'success', 'error', 'warning', 'info'],
+        disabled: true,
+        class: 'text-slate-500',
       },
     ],
     defaultVariants: {

@@ -7,7 +7,7 @@ import { MainLayoutRoot } from '@/layouts';
 <template>
   <MainLayoutRoot>
     <div :class="cn('px-4 py-2 flex items-center gap-2')">
-      <Button size="small" type="button" class="test" @click="() => console.log(222)">
+      <Button size="small" type="button" class="test" loading @click="() => console.log(222)">
         <SearchIcon />
         Search
       </Button>
@@ -28,7 +28,7 @@ import { MainLayoutRoot } from '@/layouts';
       <Button size="large" variant="outlined" disabled>
         DISABLED
       </Button>
-      <Button variant="text">
+      <Button variant="text" disabled>
         CLICK
       </Button>
     </div>
