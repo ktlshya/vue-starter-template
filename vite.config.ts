@@ -18,4 +18,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    // minify: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules'))
+            return 'vendor';
+          return null;
+        },
+      },
+    },
+  },
 });

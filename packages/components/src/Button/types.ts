@@ -1,9 +1,7 @@
-import type { ButtonHTMLAttributes } from 'vue';
+import type { ButtonHTMLAttributes, Component } from 'vue';
 import type { ButtonVariants } from './variants';
 
-type NativeButtonProps = Omit<ButtonHTMLAttributes, 'class' | 'color' | 'disabled' | 'type'>;
-
-export interface ButtonProps extends /* @vue-ignore */ NativeButtonProps {
+export interface ButtonProps {
   variant?: ButtonVariants['variant'];
   size?: ButtonVariants['size'];
   color?: ButtonVariants['color'];
@@ -11,6 +9,8 @@ export interface ButtonProps extends /* @vue-ignore */ NativeButtonProps {
   class?: ButtonHTMLAttributes['class'];
   disabled?: boolean;
   loading?: boolean;
+  as?: string | Component | undefined;
+  asChild?: boolean;
 }
 
 export interface ButtonEmits {

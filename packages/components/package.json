@@ -8,6 +8,7 @@
   "keywords": [],
   "exports": {
     ".": "./src/index.ts",
+    "./styles/theme.css": "./src/styles/theme.css",
     "./Button": "./src/Button/index.ts",
     "./Icons": "./src/Icons/index.ts"
   },
