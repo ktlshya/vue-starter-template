@@ -11,6 +11,14 @@ export default defineConfig({
         multiline: 1,
       }],
       'import/first': 'off',
+      'style/max-len': 'off',
+      'vue/max-len': ['error', {
+        code: 100,
+        template: 100,
+        ignoreUrls: true,
+        ignoreRegExpLiterals: true,
+        ignoreTemplateLiterals: true,
+      }],
     },
   },
   stylistic: {

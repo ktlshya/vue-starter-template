@@ -1,19 +1,60 @@
 @layer base {
   :root {
-    --brand-color: var(--color-blue-700);
+    --brand-color: var(--color-blue-600);
+    --error-color: var(--color-red-600);
+    --warning-color: var(--color-orange-600);
+    --success-color: var(--color-green-600);
 
     --brand-color-focus: var(--color-blue-200);
-    --brand-color-hover: var(--color-blue-600);
-    --brand-color-active: var(--color-blue-800);
-    --brand-color-disabled: var(--color-blue-400);
+    --brand-color-hover: var(--color-blue-500);
+    --brand-color-active: var(--color-blue-700);
+    --brand-color-disabled: var(--color-blue-300);
+
+    --error-color-focus: var(--color-red-200);
+    --error-color-hover: var(--color-red-500);
+    --error-color-active: var(--color-red-700);
+    --error-color-disabled: var(--color-red-300);
+
+    --warning-color-focus: var(--color-orange-200);
+    --warning-color-hover: var(--color-orange-500);
+    --warning-color-active: var(--color-orange-700);
+    --warning-color-disabled: var(--color-orange-300);
+
+    --success-color-focus: var(--color-green-200);
+    --success-color-hover: var(--color-green-500);
+    --success-color-active: var(--color-green-700);
+    --success-color-disabled: var(--color-green-300);
+
+    /* 文字主色 */
+    --foreground-color-primary: var(--color-neutral-900);
   }
 }
 
 @theme inline {
   --color-brand: var(--brand-color);
+  --color-error: var(--error-color);
+  --color-warning: var(--warning-color);
+  --color-success: var(--success-color);
 
   --color-brand-focus: var(--brand-color-focus);
   --color-brand-hover: var(--brand-color-hover);
   --color-brand-active: var(--brand-color-active);
   --color-brand-disabled: var(--brand-color-disabled);
+
+  --color-error-focus: var(--error-color-focus);
+  --color-error-hover: var(--error-color-hover);
+  --color-error-active: var(--error-color-active);
+  --color-error-disabled: var(--error-color-disabled);
+
+  --color-warning-focus: var(--warning-color-focus);
+  --color-warning-hover: var(--warning-color-hover);
+  --color-warning-active: var(--warning-color-active);
+  --color-warning-disabled: var(--warning-color-disabled);
+
+  --color-success-focus: var(--success-color-focus);
+  --color-success-hover: var(--success-color-hover);
+  --color-success-active: var(--success-color-active);
+  --color-success-disabled: var(--success-color-disabled);
+
+  --color-foreground-primary: var(--foreground-color-primary);
 }

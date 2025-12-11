@@ -1,18 +1,11 @@
-import type { ButtonHTMLAttributes, Component } from 'vue';
+import type { Component, HTMLAttributes } from 'vue';
 import type { ButtonVariants } from './variants';
 
-export interface ButtonProps {
-  variant?: ButtonVariants['variant'];
-  size?: ButtonVariants['size'];
-  color?: ButtonVariants['color'];
-  type?: ButtonHTMLAttributes['type'];
-  class?: ButtonHTMLAttributes['class'];
-  disabled?: boolean;
-  loading?: boolean;
+export interface ButtonProps
+  extends /* @vue-ignore */ Omit<HTMLAttributes, 'class' | 'color'> {
+  class?: any;
   as?: string | Component | undefined;
-  asChild?: boolean;
-}
-
-export interface ButtonEmits {
-  click: [event: PointerEvent];
+  theme?: ButtonVariants['theme'];
+  block?: boolean;
+  size?: ButtonVariants['size'];
 }
