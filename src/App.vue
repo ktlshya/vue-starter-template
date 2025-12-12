@@ -4,7 +4,7 @@ import { Button } from '@wm/components';
 
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
-    <Button theme="success" :block="false" size="large">
+    <Button theme="primary" :block="false" size="large" type="submit">
       确定
     </Button>
   </div>

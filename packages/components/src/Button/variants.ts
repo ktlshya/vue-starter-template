@@ -18,7 +18,7 @@ export const getButtonVariants = cva([
       false: '',
     },
     theme: {
-      primary: 'bg-brand hover:bg-brand-hover active:bg-brand-active text-white',
+      primary: '',
       danger: 'bg-error hover:bg-error-hover active:bg-error-active text-white',
       warning: 'bg-warning hover:bg-warning-hover active:bg-warning-active text-white',
       success: 'bg-success hover:bg-success-hover active:bg-success-active text-white',
@@ -28,7 +28,19 @@ export const getButtonVariants = cva([
       medium: '',
       large: 'h-10 text-base px-[calc(var(--spacing)*6-1px)] rounded-lg',
     },
+    variant: {
+      contained: '',
+      outlined: '',
+      text: '',
+    },
   },
+  compoundVariants: [
+    {
+      theme: 'primary',
+      variant: 'contained',
+      class: 'bg-brand hover:bg-brand-hover active:bg-brand-active text-white',
+    },
+  ],
 });
 
 export type ButtonVariants = VariantProps<typeof getButtonVariants>;
