@@ -9,4 +9,6 @@ export interface ButtonProps {
   size?: ButtonVariants['size'];
   type?: HTMLButtonElement['type'];
   variant?: ButtonVariants['variant'];
+  disabled?: boolean;
+  loading?: boolean;
 }
