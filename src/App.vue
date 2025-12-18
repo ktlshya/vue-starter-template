@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Button } from '@wm/components';
+import { SaveIcon } from 'lucide-vue-next';
 import { ref } from 'vue';
 
 const disabled = ref(false);
@@ -39,6 +40,7 @@ const loading = ref(false);
       type="submit"
       :disabled="disabled"
       :loading="loading"
+      :icon="SaveIcon"
       @click="() => console.log('click')"
     >
       确定

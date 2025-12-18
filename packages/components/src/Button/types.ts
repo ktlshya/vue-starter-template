@@ -11,4 +11,5 @@ export interface ButtonProps {
   variant?: ButtonVariants['variant'];
   disabled?: boolean;
   loading?: boolean;
+  icon?: Component | undefined;
 }

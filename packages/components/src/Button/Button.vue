@@ -18,7 +18,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 });
 
 const disabled = computed(() => props.disabled || props.loading);
-
 const asAttrs = computed(() => {
   return props.as === 'button' ? { type: props.type, disabled: disabled.value } : undefined;
 });
@@ -35,11 +34,13 @@ const asAttrs = computed(() => {
       size: props.size,
       variant: props.variant,
       disabled,
-      loading: props.loading,
     }), props.class)"
     v-bind="{ ...asAttrs, ...$attrs }"
   >
-    <Loader2Icon v-if="props.loading" data-slot="loading" class="animate-spin" />
+    <Loader2Icon v-if="props.loading" data-slot="loading" class="size-[1em] animate-spin" />
+    <slot v-else name="icon">
+      <component :is="props.icon" v-if="props.icon" data-slot="icon" class="size-[1em]" />
+    </slot>
     <slot></slot>
   </component>
 </template>

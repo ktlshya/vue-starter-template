@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 
 export const getButtonVariants = cva([
   'relative',
-  'inline-flex items-center justify-center box-border',
+  'inline-flex items-center justify-center box-border gap-1',
   'border border-transparent',
   'whitespace-nowrap',
   'cursor-pointer outline-line',
@@ -50,28 +50,8 @@ export const getButtonVariants = cva([
         'aria-disabled:text-neutral-300 aria-disabled:bg-transparent',
       ],
     },
-    loading: {
-      true: 'gap-1',
-      false: '',
-    },
   },
   compoundVariants: [
-    {
-      size: 'small',
-      loading: true,
-      class: '**:data-[slot=loading]:size-2.5',
-    },
-    {
-      size: 'medium',
-      loading: true,
-      class: '**:data-[slot=loading]:size-3.5',
-    },
-    {
-      size: 'large',
-      loading: true,
-      class: '**:data-[slot=loading]:size-4.5',
-
-    },
     {
       theme: 'primary',
       variant: 'contained',

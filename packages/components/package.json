@@ -17,7 +17,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@wm/utils": "workspace:*",
-    "lucide-vue-next": "^0.555.0"
+    "@wm/utils": "workspace:*"
   }
 }
